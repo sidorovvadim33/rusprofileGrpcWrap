@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package rusprofileGrpcWrap;
+
+option go_package = "./rpc";
+
+//import "google/api/annotations.proto";
+import "google/api/annotations.proto";
+
+message InnRequest {
+  string inn = 1;
+}
+
+message InfoResponse {
+  string inn = 1;
+  string ogrn = 2;
+  string companyName = 3;
+  string ceoName = 4;
+}
+
+service RusprofileGrpcWrap {
+  rpc FirmInfoGet(InnRequest) returns (InfoResponse) {
+    option (google.api.http) = {
+      get: "/inn/{inn}"
+    };
+  }
+}

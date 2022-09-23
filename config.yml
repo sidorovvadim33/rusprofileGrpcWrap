@@ -1,0 +1,6 @@
+---
+
+listen:
+  bind_ip: localhost
+  port: 8091
+  proxy_port: 8090

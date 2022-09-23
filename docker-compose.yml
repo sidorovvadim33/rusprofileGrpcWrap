@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  grpc-wrap:
+    container_name: grpc-wrap
+    build: .
+#      context: .
+#      dockerfile: ./Dockerfile
+    ports:
+      - "8090:8090"
+#    command: ./rusprofileGrpcWrap
+
+#    version: "3.8"
+#    services:
+#      mmm:
+#        container_name: mmm
+#        build: .
+#        ports:
+#          - "8090:8090"
